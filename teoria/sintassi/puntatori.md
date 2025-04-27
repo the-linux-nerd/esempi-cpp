@@ -51,6 +51,11 @@ int *a = new int(0); // stack: {a} heap: {*a}
 }
 ```
 
+cosa    | dove si trova    | cosa contiene
+--------|------------------|--------------------------------------------------------------
+a       | stack            | un indirizzo di memoria (verso heap) ad es. 0x7fff...38
+*a      | heap             | il valore 0
+
 # esempio 3
 
 ```
