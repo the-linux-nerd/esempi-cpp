@@ -51,6 +51,11 @@ int *a = new int(0); // stack: {a} heap: {*a}
 }
 ```
 
+cosa    | dove si trova    | cosa contiene
+--------|------------------|--------------------------------------------------------------
+a       | stack            | un indirizzo di memoria (verso heap) ad es. 0x7fff...38
+*a      | heap             | il valore 0
+
 # esempio 3
 
 ```
@@ -65,6 +70,32 @@ int main() {
   std::cout << "a: " << a << std::endl; // 1
   std::cout << "b: " << b << std::endl; // 1
   std::cout << "*ptr: " << *ptr << std::endl; // 1
+
+  return 0;
+
+}
+```
+
+# esempio 4
+
+```
+#include <iostream>
+
+int main() {
+
+  int a = 1;
+
+  std::cout << "a: " << a << std::endl; // 1
+  std::cout << "&a: " << &a << std::endl; // 1
+
+  int *ptr = &a;
+
+  std::cout << "ptr: " << ptr << std::endl; // 1
+  std::cout << "*ptr: " << *ptr << std::endl; // 1
+
+  int b = *ptr;
+
+  std::cout << "b: " << b << std::endl; // 1
 
   return 0;
 
