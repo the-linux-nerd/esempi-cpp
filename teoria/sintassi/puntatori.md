@@ -70,3 +70,29 @@ int main() {
 
 }
 ```
+
+# esempio 4
+
+```
+#include <iostream>
+
+int main() {
+
+  int a = 1;
+
+  std::cout << "a: " << a << std::endl; // 1
+  std::cout << "&a: " << &a << std::endl; // 1
+
+  int *ptr = &a;
+
+  std::cout << "ptr: " << ptr << std::endl; // 1
+  std::cout << "*ptr: " << *ptr << std::endl; // 1
+
+  int b = *ptr;
+
+  std::cout << "b: " << b << std::endl; // 1
+
+  return 0;
+
+}
+```
