@@ -52,3 +52,65 @@ namespace persone {
 
 #endif // PERSONE_H
 ```
+
+```
+// persone.cpp
+#include "persone.h"
+
+namespace persone {
+
+    // Constructor
+    persona::persona(const std::string& nome, const std::string& cognome, int eta)
+        : nome(nome), cognome(cognome), eta(eta) {}
+
+    // Destructor
+    persona::~persona() {}
+
+    // Getters
+    std::string persona::getNome() const {
+        return nome;
+    }
+
+    std::string persona::getCognome() const {
+        return cognome;
+    }
+
+    int persona::getEta() const {
+        return eta;
+    }
+
+    // Setters
+    void persona::setNome(const std::string& nome) {
+        this->nome = nome;
+    }
+
+    void persona::setCognome(const std::string& cognome) {
+        this->cognome = cognome;
+    }
+
+    void persona::setEta(int eta) {
+        this->eta = eta;
+    }
+
+} // namespace persone
+```
+
+```
+// main.cpp
+#include <iostream>
+#include "persone.h"
+
+int main() {
+    persone::persona p("Mario", "Rossi", 30);
+
+    std::cout << "Nome: " << p.getNome() << std::endl;
+    std::cout << "Cognome: " << p.getCognome() << std::endl;
+    std::cout << "Età: " << p.getEta() << std::endl;
+
+    p.setEta(31);
+    std::cout << "Età aggiornata: " << p.getEta() << std::endl;
+
+    return 0;
+}
+```
+
