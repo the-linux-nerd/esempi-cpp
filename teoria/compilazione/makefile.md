@@ -96,3 +96,7 @@ clean:
 ```
 
 Dopo aver dato il comando make è possibile usare make clean per pulire la cartella di lavoro dal file tmp che avremo creato.
+
+# link-o-grafia
+- https://makefiletutorial.com/
+- http://matteolucarelli.altervista.org/opendev/makeintro.htm
