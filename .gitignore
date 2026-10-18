@@ -1,0 +1,6 @@
+# binari e oggetti prodotti da make
+*.o
+main
+hello-world
+bin/
+obj/
